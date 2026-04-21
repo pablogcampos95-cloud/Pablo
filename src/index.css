@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --color-brand-primary: #6366f1;
+  --color-brand-secondary: #8b5cf6;
+  --color-surface: #0f172a;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-slate-200 font-sans antialiased;
+  }
+}
+
+@utility glass {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@utility glass-card {
+  @apply glass rounded-2xl shadow-2xl;
+}
+
+@utility btn-primary {
+  @apply bg-linear-to-r from-brand-primary to-brand-secondary text-white font-semibold py-2.5 px-6 rounded-xl hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-brand-primary/20;
+}
+
+@utility nav-active {
+  @apply bg-white/10 text-white border-l-4 border-brand-primary;
+}
+
+@utility custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    @apply bg-slate-800 rounded-full;
+  }
+}
+
+@utility bg-mesh {
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.1) 0px, transparent 50%);
+}

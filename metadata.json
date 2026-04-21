@@ -1,0 +1,6 @@
+{
+  "name": "Portal de Analítica de Calidad B2B",
+  "description": "Plataforma avanzada de análisis para auditoría de calidad, ranking de asesores y planes de coaching impulsados por IA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["Data Analysis", "Reporting", "Performance Monitoring"]
+}
